@@ -20,6 +20,7 @@ api_data/v1
 build/
 .build/
 *.bak
+*.backup
 .vagrant/
 quantum/version.h
 .idea/
