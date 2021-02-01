@@ -1,10 +1,10 @@
 #include QMK_KEYBOARD_H
 
+#define KC_BSDL SHIFT_BSPC_DEL
+
 enum custom_keycodes {
 	SHIFT_BSPC_DEL,	// shift + backspace = delete
 };
-
-#define KC_BSDL SHIFT_BSPC_DEL
 
 enum custom_layers {
 	BASE = 0,	// base layer (default)
