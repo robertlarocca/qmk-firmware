@@ -18,19 +18,6 @@
 
 # QMK-specific
 api_data/v1
-<<<<<<< HEAD
-build/
-.build/
-*.bak
-*.backup
-.vagrant/
-quantum/version.h
-.idea/
-CMakeLists.txt
-cmake-build-debug
-.clang_complete
-=======
->>>>>>> upstream/master
 doxygen/
 quantum/version.h
 !quantum/tools/eeprom_reset.hex
