@@ -1,81 +1,140 @@
-# Junk files
+# You should customize this list as applicable to this project.
+#
+# Learn more about .gitignore:
+# - https://git-scm.com/docs/gitignore
+# - https://github.com/github/gitignore
+#
+
+# Ansible
+*.retry
+
+# Backup
 *.bak
+*.gho
+*.orig
+*.tmp
+
+# GPG
+secring.*
+
+# SVN
+.svn/
+
+# Plain-text passwords
+#
+# Consider encrypting files with private information using
+# Ansible Vault for real security not just obscurity:
+#   https://docs.ansible.com/ansible/latest/vault_guide/index.html
+#
+*.passwd
+**/.passwd/
+
+# Log files
+*.log
+*.log[0-9]
+
+# JetBrains IDEs
+.idea_modules/
+.idea/
+*.iws
+out/
+
+# Sublime Text
+*.stTheme.cache
+*.sublime-workspace
+*.tmlanguage.cache
+*.tmPreferences.cache
+GitHub.sublime-settings
+
+# Visual Studio Code
+.history/
+.vscode/
+*.vsix
+
+# Xcode
+*.xccheckout
+*.xcscmblueprint
+xcuserdata/
+
+# macOS
+._*
+.apdisk
+.AppleDB
+.AppleDesktop
+.AppleDouble
+.com.apple.timemachine.donotpresent
+.DocumentRevisions-V100
+.DS_Store
+.fseventsd
+.LSOverride
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+Icon\r\r
+Network Trash Folder
+Temporary Items
+
+# Windows
+[Dd]esktop.ini
+*.cab
+*.lnk
+*.msi
+*.msix
+*.msm
+*.msp
+*.stackdump
+$RECYCLE.BIN/
+ehthumbs_vista.db
+ehthumbs.db
+Thumbs.db
+Thumbs.db:encryptable
+
+## QMK Firmware ##
+
+# QMK junk and merge files
+*.rej
 *.swp
 *~
-.DS_Store
-._*
 
-# Merge files
-*.orig
-*.rej
-
-# Build artifacts
-.clang_complete
+# QMK build artifacts
 .build/
+.clang_complete
+*.a
+*.dll
+*.dylib
 *.elf
+*.la
 *.log
 *.lss
 *.lst
 *.map
 *.o
-*.a
 *.so
-*.dylib
-*.dll
-*.la
 *.stackdump
 *.sym
 
-# QMK-specific
-api_data/v1
-quantum/version.h
+# QMK specific files
 *.bin
 *.eep
 *.hex
 *.qmk
 *.uf2
+api_data/v1
+quantum/version.h
 
-# DD config at wrong location
+# QKM dd/config files at wrong location
 /keyboards/**/keymaps/*/info.json
 /keyboards/**/keymaps/*/keyboard.json
 
-# Old-style QMK Makefiles
+# QMK Old-style make files
 /keyboards/**/Makefile
 
-# kbfirmware....
+# QMK keyboard firmware files
 /keyboards/**/kb.h
 /keyboards/**/kb.c
 
-# Eclipse/PyCharm/Other IDE Settings
-*.iml
-.browse.VC.db*
-.cproject
-.idea
-.idea/
-.project
-.settings/
-
-# ?
-.dep
-.history/
-build/
-cmake-build-debug
-CMakeLists.txt
-*.pdf
-
-# Let these ones be user specific, since we have so many different configurations
-*.code-workspace
-.stfolder
-.tags
-.vscode/c_cpp_properties.json
-.vscode/ipch/
-.vscode/last.sql
-.vscode/launch.json
-.vscode/tasks.json
-.vscode/temp.sql
-tags
-
-# Ignore image/font files
+# QMK image and font files
 *.bmp
 *.wbmp
 *.gif
@@ -92,28 +151,3 @@ tags
 *.mpeg
 *.ttf
 *.otf
-
-# Things Travis sees
-/.vs
-id_rsa_*
-secrets.tar
-
-# Python things
-__pycache__
-.python-version
-.venv
-
-# Prerequisites for updating ChibiOS
-/util/fmpp*
-
-# Allow to exist but don't include it in the repo
-user_song_list.h
-
-# clangd
-compile_commands.json
-.clangd/
-.cache/
-
-# VIA(L) files that don't belong in QMK repo
-via*.json
-/keyboards/**/keymaps/vial/*
